@@ -203,7 +203,7 @@
       smoothstep(0.62, 0.72, relief) *
       smoothstep(0.95, 0.75, distFromCenter);
 
-    vec3 causticColor = vec3(0.35, 0.85, 1.0) * caustic * 0.10 * baseInside;
+    vec3 causticColor = vec3(0.35, 0.85, 1.0) * caustic * 0.28 * baseInside;
 
     // Brightness-driven glow, but very restrained.
     float brightness = max(max(logo.r, logo.g), logo.b);
