@@ -135,19 +135,19 @@
 
         // Soft animated lava/wave field.
         vec2 flow = vec2(
-          fbm(logoUv * 153.0 + vec2(u_time * 0.10, u_time * 0.04)),
-          fbm(logoUv * 153.0 - vec2(u_time * 0.05, u_time * 0.11))
+          fbm(logoUv * 103.0 + vec2(u_time * 0.10, u_time * 0.04)),
+          fbm(logoUv * 113.0 - vec2(u_time * 0.05, u_time * 0.11))
         );
 
-        vec2 wave = vec2(
-          sin((logoUv.y * 2.0) + u_time * 4.2),
-          cos((logoUv.x * 3.0) - u_time * 4.0)
-        );
+        //vec2 wave = vec2(
+        //  sin((logoUv.y * 2.0) + u_time * 4.2),
+        //  cos((logoUv.x * 3.0) - u_time * 4.0)
+        //);
 
         // Keep distortion subtle; otherwise the logo becomes unreadable.
         vec2 distortedUv = logoUv
-          + (flow - 0.5) * 0.030
-          + wave * 0.006;
+          + (flow - 0.5) * 0.030;
+         // + wave * 0.006;
 
         vec4 logo = texture(u_logo, distortedUv);
 
