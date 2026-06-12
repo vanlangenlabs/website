@@ -22,10 +22,10 @@ canvas {
 .page-content {
   position: fixed;
   left: 50%;
-  top: 66vh;
-  transform: translate(-50%, -50%);
+  bottom: clamp(2rem, 8vh, 5rem);
+  transform: translateX(-50%);
   z-index: 1;
-  width: min(90vw, 720px);
+  width: min(90vw, 760px);
   text-align: center;
   pointer-events: none;
 }
