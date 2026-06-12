@@ -25,8 +25,17 @@ Use a local HTTP server (required for correct texture/image loading in WebGL):
 
 - Via VS Code Task: run `Serve docs (py)` or `Serve docs (python)`.
 - Via F5: use `Launch docs site (py)` or `Launch docs site (python)`.
+- The F5 launch profiles first start the matching Python server task and only open the browser after the server reports that it is ready.
 
 The site will be available at: `http://localhost:8000`
+
+## VS Code Integration
+
+- `.vscode/tasks.json` defines two background tasks for serving the `docs/` folder with Python.
+- Each task includes a background matcher that waits for the `Serving HTTP on` message, allowing VS Code to detect when the server is ready.
+- `.vscode/launch.json` defines F5 launch profiles for Microsoft Edge.
+- Each launch profile uses `preLaunchTask` so pressing F5 starts the local server automatically before opening `http://localhost:8000`.
+- If port `8000` is already in use, stop the existing server process before launching again.
 
 ## Project Structure
 
