@@ -5,92 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Van Langen Labs</title>
 
-  <style>
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      min-height: 100%;
-      overflow: hidden;
-      background: #000;
-      color: white;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    canvas {
-      position: fixed;
-      inset: 0;
-      width: 100vw;
-      height: 100vh;
-      display: block;
-      background: #000;
-      z-index: 0;
-    }
-
-    .page-content {
-      position: fixed;
-      left: 50%;
-      top: 66vh;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      width: min(90vw, 720px);
-      text-align: center;
-      pointer-events: none;
-    }
-
-    .slogan {
-      margin: 0;
-      font-size: clamp(1.1rem, 2.8vw, 2rem);
-      font-weight: 300;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(220, 245, 255, 0.92);
-      text-shadow:
-        0 0 12px rgba(0, 180, 255, 0.45),
-        0 0 32px rgba(0, 120, 255, 0.25);
-    }
-
-    .subtitle {
-      margin-top: 0.85rem;
-      font-size: clamp(0.8rem, 1.6vw, 1rem);
-      font-weight: 300;
-      letter-spacing: 0.04em;
-      color: rgba(180, 215, 230, 0.65);
-    }
-
-    .fallback-logo {
-      position: fixed;
-      left: 50%;
-      top: 42vh;
-      transform: translate(-50%, -50%);
-      width: min(72vw, 420px);
-      height: auto;
-      display: none;
-      z-index: 0;
-    }
-
-    body.no-webgl .fallback-logo {
-      display: block;
-    }
-
-    body.no-webgl canvas {
-      display: none;
-    }
-
-    @media (max-height: 620px) {
-      .page-content {
-        top: 72vh;
-      }
-
-      .slogan {
-        font-size: clamp(0.95rem, 4vw, 1.4rem);
-      }
-
-      .subtitle {
-        display: none;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
@@ -107,6 +22,6 @@
     <p class="subtitle">Software · Architecture · Experiments</p>
   </main>
 
-  <script src="logo.js" defer></script>
+  <script src="./logo.js" defer></script>
 </body>
 </html>
